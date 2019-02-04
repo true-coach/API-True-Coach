@@ -29,10 +29,10 @@ namespace TrueCoachAPI.Controllers
         }
 
         // GET: api/Users/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        [HttpGet("{userName}")]
+        public async Task<ActionResult<User>> GetUser(string userName)
         {
-            var user = await _context.Users.FindAsync(id);
+            var user = await _context.Users.Where(m => m.UserName == userName).FirstOrDefaultAsync();
 
             if (user == null)
             {
@@ -73,13 +73,17 @@ namespace TrueCoachAPI.Controllers
         }
 
         // POST: api/Users
-        [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+      
+
+        [HttpPost("{userName}")]
+        public async Task<ActionResult<User>> CreateUser(string userName)
         {
+            var user = new User();
+            user.UserName = userName;
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.ID }, user);
+            return user;
         }
 
         // DELETE: api/Users/5

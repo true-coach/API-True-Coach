@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+<h1>Register</h1>
+
+
+@using (Html.BeginForm("CreateUser", "User", FormMethod.Post))
+{
+    <p>
+        Title: @Html.TextBox("UserName") <br />
+        <input type="submit" value="Filter" />
+        @ViewBag.Status
+    </p>
+}

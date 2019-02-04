@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TrueCoach.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace TrueCoach.Controllers
 {
@@ -12,11 +13,14 @@ namespace TrueCoach.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.UserName = TempData["TrueCoachUserID"];
+
             return View();
         }
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 

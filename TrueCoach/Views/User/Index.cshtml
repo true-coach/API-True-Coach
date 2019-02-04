@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "User";
+    Layout = "_Layout";
+
+}
+
+<h1>User Login</h1>
+
+@using (Html.BeginForm("Login", "User", FormMethod.Post))
+{
+    <p>
+        Title: @Html.TextBox("UserName") <br />
+        <input type="submit" value="Enter" />
+        @ViewBag.Status
+    </p>
+}
