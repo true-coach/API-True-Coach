@@ -83,8 +83,8 @@ namespace TrueCoach.Controllers
         {
             var user = CreateUserByUserName(UserName);
             //this.ControllerContext.HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
-            //HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
-            TempData["TrueCoachUserID"] = user.UserName;
+            HttpContext.Session.SetString("TrueCoachUserID", user.UserName);
+           // TempData["TrueCoachUserID"] = user.UserName;
             return RedirectToAction("Index", "Home");
         }
         public IActionResult Register()
