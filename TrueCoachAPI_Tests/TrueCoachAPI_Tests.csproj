@@ -16,4 +16,13 @@
     <ProjectReference Include="..\TrueCoachAPI\TrueCoachAPI.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="TrueCoachAPI">
+      <HintPath>..\TrueCoachAPI\bin\Debug\netcoreapp2.2\TrueCoachAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

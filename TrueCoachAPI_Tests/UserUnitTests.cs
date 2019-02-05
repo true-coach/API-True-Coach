@@ -2,6 +2,9 @@
 using Xunit;
 using TrueCoachAPI.Models;
 using TrueCoachAPI.Controllers;
+using TrueCoachAPI.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace TrueCoachAPI_Tests
 {
     public class UserUnitTest
@@ -36,6 +39,20 @@ namespace TrueCoachAPI_Tests
             user.UserName = "First";
             user.UserName = "Name";
             Assert.Equal("Name", user.UserName);
+        }
+
+        [Fact]
+        public void CanCreateUsers()
+        {
+            //DbContextOptions<TrueCoachDbContext> options = new DbContextOptionsBuilder<TrueCoachDbContext>().UseInMemoryDatabase("").Options;
+            //using (TrueCoachDbContext context = new TrueCoachDbContext(options))
+            {
+                //Arrange
+
+                //Act
+
+                //Assert
+            }
         }
     }
 }
