@@ -11,7 +11,7 @@
 
     public enum Goals
     {
-        Strength,
+        Strength = 1,
         FatLoss,
         NoTime,
         Mobility
