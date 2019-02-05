@@ -29,10 +29,10 @@ namespace TrueCoachAPI.Controllers
         }
 
         // GET: api/Workouts/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Workout>> GetWorkout(int id)
+        [HttpGet("{GoalID}")]
+        public async Task<ActionResult<List<Workout>>> GetWorkout(int GoalID)
         {
-            var workout = await _context.Workout.FindAsync(id);
+            var workout = await _context.Workout.Where(c => c.WorkoutGoals == (Goals)GoalID).Include(c => c.WorkoutType).ToListAsync();
 
             if (workout == null)
             {

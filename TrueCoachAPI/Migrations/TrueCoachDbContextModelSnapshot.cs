@@ -35,19 +35,57 @@ namespace TrueCoachAPI.Migrations
                     b.HasIndex("WorkoutID");
 
                     b.ToTable("Exercise");
-                });
 
-            modelBuilder.Entity("TrueCoachAPI.Models.Goal", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Goal");
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Description = "Options for upper push will go here from the API side",
+                            Name = "A. Upper Push",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Description = "Options for upper pull will go here from the API side",
+                            Name = "B. Upper Pull",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Description = "Options for hiit will go here from the API side",
+                            Name = "C. HIIT of choice for 30 seconds",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Description = "Options for Horizontal push will go here from the API side",
+                            Name = "A. Horizontal Push",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Description = "Options for Horizontal pull will go here from the API side",
+                            Name = "B. Horizontal pull",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Description = "Options for Tricep will go here from the API side",
+                            Name = "A. Tricep Variation",
+                            WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 7,
+                            Description = "Options for Bicep will go here from the API side",
+                            Name = "B. Bicep Variation",
+                            WorkoutID = 1
+                        });
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.User", b =>
@@ -69,17 +107,41 @@ namespace TrueCoachAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("GoalID");
+                    b.Property<int>("WorkoutGoals");
 
                     b.Property<int>("WorkoutTypeID");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("GoalID");
-
                     b.HasIndex("WorkoutTypeID");
 
                     b.ToTable("Workout");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            WorkoutGoals = 1,
+                            WorkoutTypeID = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            WorkoutGoals = 1,
+                            WorkoutTypeID = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            WorkoutGoals = 1,
+                            WorkoutTypeID = 3
+                        },
+                        new
+                        {
+                            ID = 4,
+                            WorkoutGoals = 1,
+                            WorkoutTypeID = 4
+                        });
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.WorkoutType", b =>
@@ -93,6 +155,28 @@ namespace TrueCoachAPI.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("WorkoutType");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "Upper Body"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "Lower Body"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Name = "Full Body"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Name = "Core"
+                        });
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.Exercise", b =>
@@ -105,11 +189,6 @@ namespace TrueCoachAPI.Migrations
 
             modelBuilder.Entity("TrueCoachAPI.Models.Workout", b =>
                 {
-                    b.HasOne("TrueCoachAPI.Models.Goal", "Goal")
-                        .WithMany()
-                        .HasForeignKey("GoalID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("TrueCoachAPI.Models.WorkoutType", "WorkoutType")
                         .WithMany()
                         .HasForeignKey("WorkoutTypeID")
