@@ -41,16 +41,7 @@ namespace TrueCoachAPI.Controllers
 
             return workout;
         }
-        // GET:api/Workouts/2/2
-        //[httpget("{workoutid}")]
-        //public list<workout> getexercise(int workoutid)
-        //{
-        //    var exercise = _context.workout.where(c => c.workouttype.id == workoutid).include(c => c.workouttype.exercises).tolist();
-
-
-
-        //    return exercise;
-        //}
+      
 
 
 

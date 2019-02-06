@@ -19,26 +19,13 @@ namespace TrueCoachAPI.Controllers
         {
             _context = context;
         }
-
-
-
         ////GET:api/Exercise/2
         [HttpGet("{WorkoutID}")]
         public List<Exercise> GetExercise(int WorkoutID)
         {
-
-            // var results = from name in Exercise select name;
-
-            //var Exercises = _context.Exercise.Where(c => c.WorkoutID);
-            //var workouts = _context.WorkoutType.Where(c => c.ID == WorkoutID).Include(c => c.Name == c.Exercise.Description);
-
             return _context.Exercise.ToList();
 
-            //return workouts;
         }
-
-
-
         private bool WorkoutExists(int id)
         {
             return _context.Workout.Any(e => e.ID == id);
