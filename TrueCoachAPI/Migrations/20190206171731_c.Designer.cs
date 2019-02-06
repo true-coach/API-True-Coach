@@ -9,14 +9,14 @@ using TrueCoachAPI.Data;
 namespace TrueCoachAPI.Migrations
 {
     [DbContext(typeof(TrueCoachDbContext))]
-    [Migration("20190204225803_second")]
-    partial class second
+    [Migration("20190206171731_c")]
+    partial class c
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
+                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
