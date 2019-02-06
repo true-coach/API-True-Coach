@@ -10,8 +10,8 @@ using TrueCoachAPI.Data;
 namespace TrueCoachAPI.Migrations
 {
     [DbContext(typeof(TrueCoachDbContext))]
-    [Migration("20190206070258_data")]
-    partial class data
+    [Migration("20190206215708_newdb")]
+    partial class newdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -102,6 +102,79 @@ namespace TrueCoachAPI.Migrations
                             Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list",
                             Name = "A. FINISHER",
                             WorkoutID = 1
+                        });
+                });
+
+            modelBuilder.Entity("TrueCoachAPI.Models.Meal", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("NutritionId");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("NutritionId")
+                        .IsUnique();
+
+                    b.ToTable("MealPlan");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
+                            Name = "Lose Body Fat",
+                            NutritionId = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
+                            Name = "Build Muscle",
+                            NutritionId = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.",
+                            Name = "Maintain",
+                            NutritionId = 3
+                        });
+                });
+
+            modelBuilder.Entity("TrueCoachAPI.Models.Nutrition", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("NutritionGoals");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Nutrition");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            NutritionGoals = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            NutritionGoals = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            NutritionGoals = 3
                         });
                 });
 
@@ -205,6 +278,14 @@ namespace TrueCoachAPI.Migrations
                     b.HasOne("TrueCoachAPI.Models.Workout", "Workout")
                         .WithMany()
                         .HasForeignKey("WorkoutID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("TrueCoachAPI.Models.Meal", b =>
+                {
+                    b.HasOne("TrueCoachAPI.Models.Nutrition", "Nutrition")
+                        .WithOne("Meals")
+                        .HasForeignKey("TrueCoachAPI.Models.Meal", "NutritionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

@@ -136,45 +136,45 @@ namespace TrueCoachAPI.Data
                    Name = "A. FINISHER",
                    Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list"
                });
-            //modelBuilder.Entity<Nutrition>().HasData(
-            //  new Nutrition
-            //    {
-            //        ID = 1,
-            //        NutritionGoals = FoodGoal.LoseFat,
-            //    },
-            //  new Nutrition
-            //     {
-            //         ID = 1,
-            //         NutritionGoals = FoodGoal.BuildMuscle,
-            //     },
-            //  new Nutrition
-            //      {
-            //          ID = 1,
-            //          NutritionGoals = FoodGoal.Maintain,
-            //      });
-            //modelBuilder.Entity<Meal>().HasData(
-            //    new Meal
-            //    {
-            //        ID = 1,
-            //        Name = "Lose Body Fat",
-            //        Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
-            //        NutritionID = 1
-            //    },
-            //    new Meal
-            //    {
-            //        ID = 2,
-            //        Name = "Build Muscle",
-            //        Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
-            //        NutritionID = 2
-            //    },
-            //    new Meal
-            //    {
-            //        ID = 3,
-            //        Name = "Maintain",
-            //        Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.",
-            //        NutritionID = 3
-            //    });
-}
+            modelBuilder.Entity<Nutrition>().HasData(
+              new Nutrition
+              {
+                  ID = 1,
+                  NutritionGoals = FoodGoal.LoseFat,
+              },
+              new Nutrition
+              {
+                  ID = 2,
+                  NutritionGoals = FoodGoal.BuildMuscle,
+              },
+              new Nutrition
+              {
+                  ID = 3,
+                  NutritionGoals = FoodGoal.Maintain,
+              });
+            modelBuilder.Entity<Meal>().HasData(
+                new Meal
+                {
+                    ID = 1,
+                    Name = "Lose Body Fat",
+                    Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
+                    NutritionId = 1
+                },
+                new Meal
+                {
+                    ID = 2,
+                    Name = "Build Muscle",
+                    Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
+                    NutritionId = 2
+                },
+                new Meal
+                {
+                    ID = 3,
+                    Name = "Maintain",
+                    Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.",
+                    NutritionId = 3
+                });
+        }
         public DbSet<TrueCoachAPI.Models.User> Users { get; set; }
         public DbSet<TrueCoachAPI.Models.Exercise> Exercise { get; set; }
         public DbSet<TrueCoachAPI.Models.Workout> Workout { get; set; }
