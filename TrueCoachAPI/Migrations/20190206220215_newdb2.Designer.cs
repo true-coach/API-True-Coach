@@ -10,8 +10,8 @@ using TrueCoachAPI.Data;
 namespace TrueCoachAPI.Migrations
 {
     [DbContext(typeof(TrueCoachDbContext))]
-    [Migration("20190206190526_r")]
-    partial class r
+    [Migration("20190206220215_newdb2")]
+    partial class newdb2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -115,13 +115,37 @@ namespace TrueCoachAPI.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("NutritionID");
+                    b.Property<int>("NutritionId");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("NutritionID");
+                    b.HasIndex("NutritionId")
+                        .IsUnique();
 
                     b.ToTable("MealPlan");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
+                            Name = "Lose Body Fat",
+                            NutritionId = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
+                            Name = "Build Muscle",
+                            NutritionId = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.",
+                            Name = "Maintain",
+                            NutritionId = 3
+                        });
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.Nutrition", b =>
@@ -135,6 +159,23 @@ namespace TrueCoachAPI.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Nutrition");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            NutritionGoals = 1
+                        },
+                        new
+                        {
+                            ID = 2,
+                            NutritionGoals = 2
+                        },
+                        new
+                        {
+                            ID = 3,
+                            NutritionGoals = 3
+                        });
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.User", b =>
@@ -243,8 +284,8 @@ namespace TrueCoachAPI.Migrations
             modelBuilder.Entity("TrueCoachAPI.Models.Meal", b =>
                 {
                     b.HasOne("TrueCoachAPI.Models.Nutrition", "Nutrition")
-                        .WithMany()
-                        .HasForeignKey("NutritionID")
+                        .WithOne("Meals")
+                        .HasForeignKey("TrueCoachAPI.Models.Meal", "NutritionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
