@@ -15,30 +15,30 @@ namespace TrueCoachAPI.Data
             //modelBuilder.Entity<Workout>().HasKey(ce => new
             //{
             //    ce.WorkoutTypeID,
-                
+
             //});
 
             modelBuilder.Entity<WorkoutType>().HasData(
               new WorkoutType
-                {
-                    ID = 1,
-                    Name = "Upper Body"
-                },
+              {
+                  ID = 1,
+                  Name = "Upper Body"
+              },
               new WorkoutType
-                 {
-                     ID = 2,
-                     Name = "Lower Body"
-                 },
+              {
+                  ID = 2,
+                  Name = "Lower Body"
+              },
               new WorkoutType
-                  {
-                      ID = 3,
-                      Name = "Full Body"
-                  },
+              {
+                  ID = 3,
+                  Name = "Full Body"
+              },
               new WorkoutType
-                   {
-                       ID = 4,
-                       Name = "Core"
-                   });
+              {
+                  ID = 4,
+                  Name = "Core"
+              });
             modelBuilder.Entity<Workout>().HasData(
               new Workout
                {
@@ -125,6 +125,6 @@ namespace TrueCoachAPI.Data
         public DbSet<TrueCoachAPI.Models.User> Users { get; set; }
         public DbSet<TrueCoachAPI.Models.Exercise> Exercise { get; set; }
         public DbSet<TrueCoachAPI.Models.Workout> Workout { get; set; }
-        public DbSet<TrueCoachAPI.Models.WorkoutType> WorkoutType { get; set; }
+       public DbSet<TrueCoachAPI.Models.WorkoutType> WorkoutType { get; set; }
     }
 }
