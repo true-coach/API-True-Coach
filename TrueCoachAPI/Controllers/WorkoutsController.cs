@@ -41,8 +41,9 @@ namespace TrueCoachAPI.Controllers
 
             return workout;
         }
+      
 
-        
+
 
         private bool WorkoutExists(int id)
         {
