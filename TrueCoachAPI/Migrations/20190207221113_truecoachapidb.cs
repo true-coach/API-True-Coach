@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TrueCoachAPI.Migrations
 {
-    public partial class newdb : Migration
+    public partial class truecoachapidb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -34,24 +34,25 @@ namespace TrueCoachAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "MealPlan",
+                name: "Meal",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NutritionId = table.Column<int>(nullable: false),
+                    NutritionPlanId = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    Description = table.Column<string>(nullable: true),
+                    NutritionID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MealPlan", x => x.ID);
+                    table.PrimaryKey("PK_Meal", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_MealPlan_Nutrition_NutritionId",
-                        column: x => x.NutritionId,
+                        name: "FK_Meal_Nutrition_NutritionID",
+                        column: x => x.NutritionID,
                         principalTable: "Nutrition",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -110,6 +111,17 @@ namespace TrueCoachAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "Meal",
+                columns: new[] { "ID", "Description", "Name", "NutritionID", "NutritionPlanId" },
+                values: new object[,]
+                {
+                    { 1, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.", "Meal 1", null, 1 },
+                    { 2, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.", "Meal 2", null, 1 },
+                    { 3, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.", "Meal 3", null, 1 },
+                    { 4, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.", "Meal 4", null, 1 }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Nutrition",
                 columns: new[] { "ID", "NutritionGoals" },
                 values: new object[,]
@@ -128,16 +140,6 @@ namespace TrueCoachAPI.Migrations
                     { 2, null, "Lower Body" },
                     { 3, null, "Full Body" },
                     { 4, null, "Core" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "MealPlan",
-                columns: new[] { "ID", "Description", "Name", "NutritionId" },
-                values: new object[,]
-                {
-                    { 1, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.", "Lose Body Fat", 1 },
-                    { 2, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.", "Build Muscle", 2 },
-                    { 3, "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.", "Maintain", 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -173,10 +175,9 @@ namespace TrueCoachAPI.Migrations
                 column: "WorkoutID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MealPlan_NutritionId",
-                table: "MealPlan",
-                column: "NutritionId",
-                unique: true);
+                name: "IX_Meal_NutritionID",
+                table: "Meal",
+                column: "NutritionID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Workout_WorkoutTypeID",
@@ -204,7 +205,7 @@ namespace TrueCoachAPI.Migrations
                 table: "Exercise");
 
             migrationBuilder.DropTable(
-                name: "MealPlan");
+                name: "Meal");
 
             migrationBuilder.DropTable(
                 name: "Users");

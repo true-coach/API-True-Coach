@@ -1,10 +1,13 @@
-﻿namespace TrueCoachAPI.Models
+﻿using System.Collections.Generic;
+
+namespace TrueCoachAPI.Models
 {
     public class Nutrition
     {
-        public int ID { get; set; }       
+        public int ID { get; set; }
         public FoodGoal NutritionGoals { get; set; }
-        public Meal Meals { get; set; }
+
+        public List<Meal> Meals { get; set; }
     }
 
     public enum FoodGoal

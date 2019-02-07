@@ -2,7 +2,7 @@
 
 namespace TrueCoachAPI.Migrations
 {
-    public partial class newdb2 : Migration
+    public partial class truecoachapidbprod : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

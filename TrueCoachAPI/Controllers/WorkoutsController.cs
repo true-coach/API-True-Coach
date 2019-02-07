@@ -21,7 +21,7 @@ namespace TrueCoachAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Workouts
+        //// GET: api/Workouts
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Workout>>> GetWorkout()
         {
@@ -41,10 +41,7 @@ namespace TrueCoachAPI.Controllers
 
             return workout;
         }
-      
-
-
-
+    
         private bool WorkoutExists(int id)
         {
             return _context.Workout.Any(e => e.ID == id);

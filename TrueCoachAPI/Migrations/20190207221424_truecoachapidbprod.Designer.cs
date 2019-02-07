@@ -10,14 +10,14 @@ using TrueCoachAPI.Data;
 namespace TrueCoachAPI.Migrations
 {
     [DbContext(typeof(TrueCoachDbContext))]
-    [Migration("20190206215708_newdb")]
-    partial class newdb
+    [Migration("20190207221424_truecoachapidbprod")]
+    partial class truecoachapidbprod
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
+                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -115,36 +115,44 @@ namespace TrueCoachAPI.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("NutritionId");
+                    b.Property<int?>("NutritionID");
+
+                    b.Property<int>("NutritionPlanId");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("NutritionId")
-                        .IsUnique();
+                    b.HasIndex("NutritionID");
 
-                    b.ToTable("MealPlan");
+                    b.ToTable("Meal");
 
                     b.HasData(
                         new
                         {
                             ID = 1,
                             Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
-                            Name = "Lose Body Fat",
-                            NutritionId = 1
+                            Name = "Meal 1",
+                            NutritionPlanId = 1
                         },
                         new
                         {
                             ID = 2,
-                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
-                            Name = "Build Muscle",
-                            NutritionId = 2
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Body Fat reduction.",
+                            Name = "Meal 2",
+                            NutritionPlanId = 1
                         },
                         new
                         {
                             ID = 3,
+                            Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Building more muscle.",
+                            Name = "Meal 3",
+                            NutritionPlanId = 1
+                        },
+                        new
+                        {
+                            ID = 4,
                             Description = "This Meal plan will follow the Precision Nutrition Guidelines to give you a slow and steady lifestyle change that will result in Maintaining current weight.",
-                            Name = "Maintain",
-                            NutritionId = 3
+                            Name = "Meal 4",
+                            NutritionPlanId = 1
                         });
                 });
 
@@ -284,9 +292,8 @@ namespace TrueCoachAPI.Migrations
             modelBuilder.Entity("TrueCoachAPI.Models.Meal", b =>
                 {
                     b.HasOne("TrueCoachAPI.Models.Nutrition", "Nutrition")
-                        .WithOne("Meals")
-                        .HasForeignKey("TrueCoachAPI.Models.Meal", "NutritionId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany("Meals")
+                        .HasForeignKey("NutritionID");
                 });
 
             modelBuilder.Entity("TrueCoachAPI.Models.Workout", b =>
