@@ -26,16 +26,16 @@ namespace TrueCoachAPI_Tests
         public void CanGetNutritionID()
         {
             Meal meal = new Meal();
-            meal.NutritionID = 1;
-            Assert.Equal(1, meal.NutritionID);
+            meal.NutritionPlanId = 1;
+            Assert.Equal(1, meal.NutritionPlanId);
         }
         [Fact]
         public void CanSetNutritionID()
         {
             Meal meal = new Meal();
-            meal.NutritionID = 1;
-            meal.NutritionID = 2;
-            Assert.Equal(2, meal.NutritionID);
+            meal.NutritionPlanId = 1;
+            meal.NutritionPlanId = 2;
+            Assert.Equal(2, meal.NutritionPlanId);
         }
 
         [Fact]
