@@ -130,12 +130,79 @@ namespace TrueCoachAPI.Data
                     Name = "B. Bicep Variation",
                     Description = "Options for Bicep: Cable Curl, Barbell Curl, DB Hammer Curl, Reverse Curl, ISO-Hold Curl, Supported Incline DB Curl"
 
+                },                
+                new Exercise
+                {
+                    ID = 10,
+                    WorkoutID = 1,
+                    Name = "C. FINISHER",
+                    Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list"
+                },
+                 new Exercise
+                 {
+                     ID = 11,
+                     WorkoutID = 2,
+                     Name = "A. Lower Push",
+                     Description = "Beginner: Goblet Squat, BW Squat, Leg Press" +
+                     "Intermediate: KB Front Squat, Barbell Box Squat" +
+                     "Advanced: Barbell Back Squat, Barbell Front Squat, OH quat "
+                    
+                 },
+                new Exercise
+                {
+                    ID = 12,
+                    WorkoutID = 2,
+                    Name = "B. Lower Pull",
+                    Description = "Beginner: KB Deadlift, Cable RDL, Hip Bridge" +
+                    "Intermediate: Elevated Bar Deadlift, RDL, Hip Thrust" +
+                    "Advanced: Power Clean, Barbell Deadlift, Barbell Hip Thrust "
+
                 },
                 new Exercise
                 {
-                    ID = 9,
-                    WorkoutID = 1,
-                    Name = "A. FINISHER",
+                    ID = 13,
+                    WorkoutID = 2,
+                    Name = "C. Lower Plyo",
+                    Description = "Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb"
+                },
+                new Exercise
+                {
+                    ID = 14,
+                    WorkoutID = 2,
+                    Name = "A. Split/Step",
+                    Description = "Beginner: Static Lunge Hold, BW Walking Lunge" +
+                    "Intermediate: DB Lunge, Lateral Lunge, Lateral Step Up" +
+                    "Advanced: Barbell Lunge, OH Lunge, Single Leg Squat"
+
+                },
+                new Exercise
+                {
+                    ID = 15,
+                    WorkoutID = 2,
+                    Name = "B. HyperExtension",
+                    Description = "Options: Lower Back Extension, Hypers, Bridge, Good Mornings"
+
+                },
+                new Exercise
+                {
+                    ID = 16,
+                    WorkoutID = 2,
+                    Name = "C. Lower Plyo",
+                    Description = "Options: Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb "
+                },
+                new Exercise
+                {
+                    ID = 17,
+                    WorkoutID = 2,
+                    Name = "A. Hamstring variation",
+                    Description = "Options: TRX hamstring curl, Machine Leg Curl, Bosu Ball Leg Curl"
+
+                },
+                new Exercise
+                {
+                    ID = 18,
+                    WorkoutID = 2,
+                    Name = "B. FINISHER",
                     Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list"
                 });
 

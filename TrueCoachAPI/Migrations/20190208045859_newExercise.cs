@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TrueCoachAPI.Migrations
 {
-    public partial class truecoachapidb : Migration
+    public partial class newExercise : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -159,14 +159,22 @@ namespace TrueCoachAPI.Migrations
                 values: new object[,]
                 {
                     { 1, "Options for upper push: Beginner: OH farmers carry, Seated shoulder press, DB Shoulder pressIntermediate: Tall kneeling landmine press, Standing OH press, Single arm DB pressAdvanced: Barbell OH press, Split Jerk, Handstand variation", "A. Upper Push", 1 },
-                    { 2, "Options for upper pull: Beginner: Tall kneeling cable pull down, Seated lat pull down, Straight arm cable pull downIntermediate: Bar hang, Assisted pull up, Free Motion pull down Advanced: Pull up, One arm hangs, Muscle up", "B. Upper Pull", 1 },
-                    { 3, "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope", "C. HIIT of choice for 30 seconds", 1 },
-                    { 4, "Options for Horizontal push: Beginner: Elevated assisted push-up, Kneeling Bilateral cable press, Seated chest pressIntermediate: Push-up, One arm DB bench press, DB flyAdvanced: Barbell Bench Press, Dynamic push up, Weighted Push-Up", "A. Horizontal Push", 1 },
-                    { 5, "Options for Horizontal pull: Beginner: Seated Row, Supported DB Row, Tall Kneeling Horizontal Cable RowIntermediate: One Arm DB Row, Landmine Bent Over Rows, TRX RowAdvanced: Barbell Row, Feet Elevated TRX Row, Weighted Unsupported Ring Rows ", "B. Horizontal pull", 1 },
-                    { 6, "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope", "C. HIIT of choice for 30 seconds", 1 },
+                    { 16, "Options: Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb ", "C. Lower Plyo", 2 },
+                    { 15, "Options: Lower Back Extension, Hypers, Bridge, Good Mornings", "B. HyperExtension", 2 },
+                    { 14, "Beginner: Static Lunge Hold, BW Walking LungeIntermediate: DB Lunge, Lateral Lunge, Lateral Step UpAdvanced: Barbell Lunge, OH Lunge, Single Leg Squat", "A. Split/Step", 2 },
+                    { 13, "Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb", "C. Lower Plyo", 2 },
+                    { 12, "Beginner: KB Deadlift, Cable RDL, Hip BridgeIntermediate: Elevated Bar Deadlift, RDL, Hip ThrustAdvanced: Power Clean, Barbell Deadlift, Barbell Hip Thrust ", "B. Lower Pull", 2 },
+                    { 11, "Beginner: Goblet Squat, BW Squat, Leg PressIntermediate: KB Front Squat, Barbell Box SquatAdvanced: Barbell Back Squat, Barbell Front Squat, OH quat ", "A. Lower Push", 2 },
+                    { 17, "Options: TRX hamstring curl, Machine Leg Curl, Bosu Ball Leg Curl", "A. Hamstring variation", 2 },
+                    { 10, "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list", "C. FINISHER", 1 },
                     { 7, "Options for Tricep: Standing Tricep Pressdown, Close Grip Push up, Close Grip Bench Press, Cable Cross Extensions, DB Skull CrusherEZ-Bar Skull Crusher ", "A. Tricep Variation", 1 },
+                    { 6, "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope", "C. HIIT of choice for 30 seconds", 1 },
+                    { 5, "Options for Horizontal pull: Beginner: Seated Row, Supported DB Row, Tall Kneeling Horizontal Cable RowIntermediate: One Arm DB Row, Landmine Bent Over Rows, TRX RowAdvanced: Barbell Row, Feet Elevated TRX Row, Weighted Unsupported Ring Rows ", "B. Horizontal pull", 1 },
+                    { 4, "Options for Horizontal push: Beginner: Elevated assisted push-up, Kneeling Bilateral cable press, Seated chest pressIntermediate: Push-up, One arm DB bench press, DB flyAdvanced: Barbell Bench Press, Dynamic push up, Weighted Push-Up", "A. Horizontal Push", 1 },
+                    { 3, "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope", "C. HIIT of choice for 30 seconds", 1 },
+                    { 2, "Options for upper pull: Beginner: Tall kneeling cable pull down, Seated lat pull down, Straight arm cable pull downIntermediate: Bar hang, Assisted pull up, Free Motion pull down Advanced: Pull up, One arm hangs, Muscle up", "B. Upper Pull", 1 },
                     { 8, "Options for Bicep: Cable Curl, Barbell Curl, DB Hammer Curl, Reverse Curl, ISO-Hold Curl, Supported Incline DB Curl", "B. Bicep Variation", 1 },
-                    { 9, "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list", "A. FINISHER", 1 }
+                    { 18, "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list", "B. FINISHER", 2 }
                 });
 
             migrationBuilder.CreateIndex(

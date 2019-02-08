@@ -96,10 +96,66 @@ namespace TrueCoachAPI.Migrations
                         },
                         new
                         {
-                            ID = 9,
+                            ID = 10,
                             Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list",
-                            Name = "A. FINISHER",
+                            Name = "C. FINISHER",
                             WorkoutID = 1
+                        },
+                        new
+                        {
+                            ID = 11,
+                            Description = "Beginner: Goblet Squat, BW Squat, Leg PressIntermediate: KB Front Squat, Barbell Box SquatAdvanced: Barbell Back Squat, Barbell Front Squat, OH quat ",
+                            Name = "A. Lower Push",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 12,
+                            Description = "Beginner: KB Deadlift, Cable RDL, Hip BridgeIntermediate: Elevated Bar Deadlift, RDL, Hip ThrustAdvanced: Power Clean, Barbell Deadlift, Barbell Hip Thrust ",
+                            Name = "B. Lower Pull",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 13,
+                            Description = "Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb",
+                            Name = "C. Lower Plyo",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 14,
+                            Description = "Beginner: Static Lunge Hold, BW Walking LungeIntermediate: DB Lunge, Lateral Lunge, Lateral Step UpAdvanced: Barbell Lunge, OH Lunge, Single Leg Squat",
+                            Name = "A. Split/Step",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 15,
+                            Description = "Options: Lower Back Extension, Hypers, Bridge, Good Mornings",
+                            Name = "B. HyperExtension",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 16,
+                            Description = "Options: Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb ",
+                            Name = "C. Lower Plyo",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 17,
+                            Description = "Options: TRX hamstring curl, Machine Leg Curl, Bosu Ball Leg Curl",
+                            Name = "A. Hamstring variation",
+                            WorkoutID = 2
+                        },
+                        new
+                        {
+                            ID = 18,
+                            Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list",
+                            Name = "B. FINISHER",
+                            WorkoutID = 2
                         });
                 });
 

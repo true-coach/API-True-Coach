@@ -21,10 +21,9 @@ namespace TrueCoachAPI.Controllers
         }
         ////GET:api/Exercise/2
         [HttpGet("{WorkoutID}")]
-        public List<Exercise> GetExercise(int WorkoutID)
+        public async Task<ActionResult<List<Exercise>>> GetExercise(int WorkoutID)
         {
-            return _context.Exercise.ToList();
-
+            return await _context.Exercise.Where(e => e.WorkoutID == WorkoutID).ToListAsync();
         }
         private bool WorkoutExists(int id)
         {
