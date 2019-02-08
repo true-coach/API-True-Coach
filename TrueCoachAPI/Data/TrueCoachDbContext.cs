@@ -65,84 +65,109 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 1,
                     WorkoutID = 1,
-                    Name = "A. Upper Push",
-                    Description = "Options for upper push: Beginner: OH farmers carry, Seated shoulder press, DB Shoulder press" +
-                    "Intermediate: Tall kneeling landmine press, Standing OH press, Single arm DB press" +
-                    "Advanced: Barbell OH press, Split Jerk, Handstand variation"
+                    Name = "Upper Push",
+                    Description = "<span><strong>Beginner:</strong> OH farmers carry, Seated shoulder press, DB Shoulder press" +
+                    "</br><strong>Intermediate:</strong> Tall kneeling landmine press, Standing OH press, Single arm DB press" +
+                    "</br><strong>Advanced:</strong> Barbell OH press, Split Jerk, Handstand variation</span>"
 
                 },
                 new Exercise
                 {
                     ID = 2,
                     WorkoutID = 1,
-                    Name = "B. Upper Pull",
-                    Description = "Options for upper pull: Beginner: Tall kneeling cable pull down, Seated lat pull down, Straight arm cable pull down" +
-                    "Intermediate: Bar hang, Assisted pull up, Free Motion pull down " +
-                    "Advanced: Pull up, One arm hangs, Muscle up"
+                    Name = "Upper Pull",
+                    Description = "<span><strong>Beginner:</strong> Tall kneeling cable pull down, Seated lat pull down, Straight arm cable pull down" +
+                    "</br><strong>Intermediate:</strong> Bar hang, Assisted pull up, Free Motion pull down " +
+                    "</br><strong>Advanced:</strong> Pull up, One arm hangs, Muscle up</span>"
                 },
                 new Exercise
                 {
                     ID = 3,
                     WorkoutID = 1,
-                    Name = "C. HIIT of choice for 30 seconds",
-                    Description = "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope"
-
+                    Name = "HIIT of choice for 30 seconds",
+                    Description = "<span><strong>Options:</strong>" +
+                    "</br>Aero Bike" +
+                    "</br>Jump Squat" + 
+                    "</br>Mountain Climber" +
+                    "</br>Sprint" +
+                    "</br>Battle ropes" +
+                    "</br>KB swing" +
+                    "</br>Jump rope</span>"
                 },
                 new Exercise
                 {
                     ID = 4,
                     WorkoutID = 1,
-                    Name = "A. Horizontal Push",
-                    Description = "Options for Horizontal push: Beginner: Elevated assisted push-up, Kneeling Bilateral cable press, Seated chest press" +
-                    "Intermediate: Push-up, One arm DB bench press, DB fly" +
-                    "Advanced: Barbell Bench Press, Dynamic push up, Weighted Push-Up"
+                    Name = "Horizontal Push",
+                    Description = "<span><strong>Beginner:</strong> Elevated assisted push-up, Kneeling Bilateral cable press, Seated chest press" +
+                    "</br><strong>Intermediate:</strong> Push-up, One arm DB bench press, DB fly" +
+                    "</br><strong>Advanced:</strong> Barbell Bench Press, Dynamic push up, Weighted Push-Up</span>"
                 },
                 new Exercise
                 {
                     ID = 5,
                     WorkoutID = 1,
-                    Name = "B. Horizontal pull",
-                    Description = "Options for Horizontal pull: Beginner: Seated Row, Supported DB Row, Tall Kneeling Horizontal Cable Row" +
-                    "Intermediate: One Arm DB Row, Landmine Bent Over Rows, TRX Row" +
-                    "Advanced: Barbell Row, Feet Elevated TRX Row, Weighted Unsupported Ring Rows "
+                    Name = "Horizontal pull",
+                    Description = "<span><strong>Options for Horizontal pull: Beginner:</strong> Seated Row, Supported DB Row, Tall Kneeling Horizontal Cable Row" +
+                    "</br><strong>Intermediate:</strong> One Arm DB Row, Landmine Bent Over Rows, TRX Row" +
+                    "</br><strong>Advanced:</strong> Barbell Row, Feet Elevated TRX Row, Weighted Unsupported Ring Rows</span>"
 
                 },
                 new Exercise
                 {
                     ID = 6,
                     WorkoutID = 1,
-                    Name = "C. HIIT of choice for 30 seconds",
-                    Description = "Options: Aero Bike, Jump Squat, Mountain Climber, Sprint, Battle ropes, KB swing, Jump rope"
+                    Name = "HIIT of choice for 30 seconds",
+                    Description = "<span><strong>Options:</strong>" +
+                    "</br>Aero Bike" +
+                    "</br>Jump Squat" +
+                    "</br>Mountain Climber" +
+                    "</br>Sprint" +
+                    "</br>Battle ropes" +
+                    "</br>KB swing" +
+                    "</br>Jump rope</span>"
 
                 },
                 new Exercise
                 {
                     ID = 7,
                     WorkoutID = 1,
-                    Name = "A. Tricep Variation",
-                    Description = "Options for Tricep: Standing Tricep Pressdown, Close Grip Push up, Close Grip Bench Press, Cable Cross Extensions, DB Skull Crusher" +
-                    "EZ-Bar Skull Crusher "
+                    Name = "Tricep Variation",
+                    Description = "<span><strong>Options:</strong>" +
+                    "</br>Standing Tricep Pressdown" +
+                    "</br>Close Grip Push Up" +
+                    "</br>Close Grip Bench Press" +
+                    "</br>Cable Cross Extensions" +
+                    "</br>DB Skull Crusher" +
+                    "</br>EZ-Bar Skull Crusher</span>"
                 },
                 new Exercise
                 {
                     ID = 8,
                     WorkoutID = 1,
-                    Name = "B. Bicep Variation",
-                    Description = "Options for Bicep: Cable Curl, Barbell Curl, DB Hammer Curl, Reverse Curl, ISO-Hold Curl, Supported Incline DB Curl"
-
+                    Name = "Bicep Variation",
+                    Description = "<span><strong>Options:</strong>" +
+                    "</br>Cable Curl" +
+                    "</br>Barbell Curl" +
+                    "</br>DB Hammer Curl" +
+                    "</br>Reverse Curl" +
+                    "</br>ISO-Hold Curl" +
+                    "</br>Supported Incline DB Curl</span>"
                 },                
                 new Exercise
                 {
                     ID = 10,
                     WorkoutID = 1,
-                    Name = "C. FINISHER",
-                    Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list"
+                    Name = "FINISHER",
+                    Description = "<span><strong>TABATA</strong>" +
+                    "</br>8 rounds for 20 seconds on and ONLY 10 seconds off!" +
+                    "</br>CHoose one exercise from the cardio list</span>"
                 },
                  new Exercise
                  {
                      ID = 11,
                      WorkoutID = 2,
-                     Name = "A. Lower Push",
+                     Name = "Lower Push",
                      Description = "Beginner: Goblet Squat, BW Squat, Leg Press" +
                      "Intermediate: KB Front Squat, Barbell Box Squat" +
                      "Advanced: Barbell Back Squat, Barbell Front Squat, OH quat "
@@ -152,7 +177,7 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 12,
                     WorkoutID = 2,
-                    Name = "B. Lower Pull",
+                    Name = "Lower Pull",
                     Description = "Beginner: KB Deadlift, Cable RDL, Hip Bridge" +
                     "Intermediate: Elevated Bar Deadlift, RDL, Hip Thrust" +
                     "Advanced: Power Clean, Barbell Deadlift, Barbell Hip Thrust "
@@ -162,14 +187,14 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 13,
                     WorkoutID = 2,
-                    Name = "C. Lower Plyo",
+                    Name = "Lower Plyo",
                     Description = "Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb"
                 },
                 new Exercise
                 {
                     ID = 14,
                     WorkoutID = 2,
-                    Name = "A. Split/Step",
+                    Name = "Split/Step",
                     Description = "Beginner: Static Lunge Hold, BW Walking Lunge" +
                     "Intermediate: DB Lunge, Lateral Lunge, Lateral Step Up" +
                     "Advanced: Barbell Lunge, OH Lunge, Single Leg Squat"
@@ -179,7 +204,7 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 15,
                     WorkoutID = 2,
-                    Name = "B. HyperExtension",
+                    Name = "HyperExtension",
                     Description = "Options: Lower Back Extension, Hypers, Bridge, Good Mornings"
 
                 },
@@ -187,14 +212,14 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 16,
                     WorkoutID = 2,
-                    Name = "C. Lower Plyo",
+                    Name = "Lower Plyo",
                     Description = "Options: Box Jump, Squat Jump, BW Squat, Russian Hop, Sprint, Hill Climb "
                 },
                 new Exercise
                 {
                     ID = 17,
                     WorkoutID = 2,
-                    Name = "A. Hamstring variation",
+                    Name = "Hamstring Variation",
                     Description = "Options: TRX hamstring curl, Machine Leg Curl, Bosu Ball Leg Curl"
 
                 },
@@ -202,7 +227,7 @@ namespace TrueCoachAPI.Data
                 {
                     ID = 18,
                     WorkoutID = 2,
-                    Name = "B. FINISHER",
+                    Name = "FINISHER",
                     Description = "TABATA-- 8 rounds for 20 seconds on and ONLY 10 seconds off! CHoose one exercise from the cardio list"
                 });
 
