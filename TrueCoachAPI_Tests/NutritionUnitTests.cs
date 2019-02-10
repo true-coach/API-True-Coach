@@ -22,21 +22,21 @@ namespace TrueCoachAPI_Tests
             Assert.Equal(2, nutrition.ID);
         }
 
-        [Fact]
-        public void CanGetNutritionGoalID()
-        {
-            Nutrition nutrition = new Nutrition();
-            nutrition.GoalID = 1;
-            Assert.Equal(1, nutrition.GoalID);
-        }
-        [Fact]
-        public void CanSetNutritionGoalID()
-        {
-            Nutrition nutrition = new Nutrition();
-            nutrition.GoalID = 1;
-            nutrition.GoalID = 2;
-            Assert.Equal(2, nutrition.GoalID);
-        }
+        //[Fact]
+        //public void CanGetNutritionGoalID()
+        //{
+        //    Nutrition nutrition = new Nutrition();
+        //    nutrition.GoalID = 1;
+        //    Assert.Equal(1, nutrition.GoalID);
+        //}
+        //[Fact]
+        //public void CanSetNutritionGoalID()
+        //{
+        //    Nutrition nutrition = new Nutrition();
+        //    nutrition.GoalID = 1;
+        //    nutrition.GoalID = 2;
+        //    Assert.Equal(2, nutrition.GoalID);
+        //}
 
     }
 }

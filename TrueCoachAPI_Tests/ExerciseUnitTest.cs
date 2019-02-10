@@ -2,6 +2,7 @@ using System;
 using Xunit;
 using TrueCoachAPI.Models;
 using TrueCoachAPI.Controllers;
+
 namespace TrueCoachAPI_Tests
 {
     public class ExerciseUnitTest
