@@ -1,4 +1,4 @@
-# API-True_Coach
+# API-TrueCoach
 * This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal.It will provide recommendations for exercises and nutrition plans to achieve the desired goal.
 * This is a basic C# Web API Application designed to handle API requests.
 * This application uses DOTNET Framework.
