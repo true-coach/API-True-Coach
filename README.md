@@ -1,12 +1,19 @@
 # API-True_Coach
-* This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal. The app will provide recommendations for exercises and nutrition to achieve the desired goal.
+* This app is designed for the everyday user that has a particular fitness goal in mind. This app will get a user on the right path to achieve their desired goal.It will provide recommendations for exercises and nutrition plans to achieve the desired goal.
 * This is a basic C# Web API Application designed to handle API requests.
 * This application uses DOTNET Framework.
 
-## API Endpoints
 The deployed site can be found at :
-
 https://truecoachapi.azurewebsites.net
+
+## API Endpoints and Swagger Implementation
+1. How we retrieved information from the API was through different endpoints created. This was a built out API url in a separate web application that sent data to a deployed database on Azure. This was a separate database from the MVC app-True Coach.
+![HowWeRetrieved](https://github.com/true-coach/API-True-Coach/blob/master/TrueCoachAPI/Assets/API-Convert-Snip.PNG)
+
+2. Endpoint were constructed to retrieve specific information regarding Nutrition and Workout plans. Wach of these has its own controller and own id to match whatever goal was selected. 
+![EndpointNutrition](https://github.com/true-coach/API-True-Coach/blob/master/TrueCoachAPI/Assets/Nutrition-Swagger-Snip.PNG)
+![EndpointWorkouts](https://github.com/true-coach/API-True-Coach/blob/master/TrueCoachAPI/Assets/Exercise-swagger-snip.PNG)
+![UserLogin](https://github.com/true-coach/API-True-Coach/blob/master/TrueCoachAPI/Assets/Users-Swagger-Snip.PNG)
 
 ![Deployed](/Assets/APIData.jpg)  
 
